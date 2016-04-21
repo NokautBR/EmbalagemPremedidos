@@ -1,0 +1,18 @@
+﻿<Window x:Class="EmbalagemPremedidos.ListaProdutosWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmbalagemPremedidos"
+        mc:Ignorable="d"
+        Title="Lista de Produtos Cadastrados" Height="400" Width="400" WindowStyle="ToolWindow" Loaded="Window_Loaded">
+    <Grid>
+        <DataGrid Name="dataGrid" ItemsSource="{Binding Produto}" AutoGenerateColumns="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Código de Barras" Binding="{Binding CodBarra}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Peso da Embalagem" Binding="{Binding PesoEmbalagem}"></DataGridTextColumn>                
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

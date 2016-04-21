@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:EmbalagemPremedidos"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Image x:Key="imgLista" Source="Recursos\route_button.png"></Image>
     </Application.Resources>
 </Application>

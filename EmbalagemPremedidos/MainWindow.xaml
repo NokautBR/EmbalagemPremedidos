@@ -5,8 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EmbalagemPremedidos"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="Pré Medidos" Height="220" Width="330" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Loaded="Window_Loaded">
+    <DockPanel>
+        <DockPanel DockPanel.Dock="Top" Margin="10">
+            <StackPanel Name="stackPanelProduto" Orientation="Vertical" PreviewKeyDown="StackPanel_PreviewKeyDown">
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <TextBlock Margin="5"><Bold>Código de barras</Bold></TextBlock>
+                    <TextBox Text="{Binding CodBarra, ValidatesOnDataErrors=True, NotifyOnValidationError=True}" 
+                             TabIndex="0" 
+                             HorizontalAlignment="Stretch" 
+                             Width="175" 
+                             MaxLength="14" 
+                             PreviewTextInput="tbCodigoBarras_PreviewTextInput"
+                             GotFocus="TextBox_GotFocus"
+                             >
+                        
+                    </TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <TextBlock Margin="5"><Bold>Peso da Embalagem (g)</Bold></TextBlock>
+                    <TextBox Text="{Binding PesoEmbalagem, ValidatesOnDataErrors=True, NotifyOnValidationError=True}" 
+                             TabIndex="1" 
+                             Width="140" 
+                             GotFocus="TextBox_GotFocus">
+                        
+                    </TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <TextBlock Margin="5"><Bold>Descrição (Opcional)</Bold></TextBlock>
+                    <TextBox Text="{Binding Descricao}" 
+                             TabIndex="2" 
+                             Width="155"
+                             GotFocus="TextBox_GotFocus"></TextBox>
+                </StackPanel>
+                <Button Name="btnSalvar" TabIndex="3" Content="Salvar" HorizontalAlignment="Center" Width="50" Height="25" Click="btnSalvar_Click" IsEnabled="False"></Button>
+            </StackPanel>
+        </DockPanel>
+        <DockPanel DockPanel.Dock="Bottom">
+            <StatusBar Margin="0,5,0,0">
+                <StatusBarItem Name="statusBarItensCadastrados" Foreground="DarkBlue">Produtos Cadastrados:  12</StatusBarItem>
+                <Button Name="btnListaProdutos" Content="{StaticResource imgLista}" Click="btnListaProdutos_Click"></Button>
+                <StatusBarItem Name="statusBarItemInfo" Foreground="Green" FontWeight= "Bold"></StatusBarItem>
+            </StatusBar>
+        </DockPanel>
+    </DockPanel>
 </Window>
