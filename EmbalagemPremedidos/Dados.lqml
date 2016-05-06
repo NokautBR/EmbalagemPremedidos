@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database Name="main" EntityNamespace="EmbalagemPremedidos" ContextNamespace="EmbalagemPremedidos" Class="Dados" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" ed:Guid="81c5eb39-9650-4526-986b-e18745213bbd" Provider="Devart.Data.SQLite.Linq.Provider.SQLiteDataProvider, Devart.Data.SQLite.Linq" Extended="true" xmlns="http://schemas.devart.com/linqconnect/mapping">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=C:\Users\darkr\Documents\Dados.db" Provider="Devart.Data.SQLite" />
+  <Table Name="&quot;main&quot;.Produto" Member="Produto">
+    <Type Name="Produto" ed:Guid="fe99a4fe-7c60-4f33-864c-39d5347dd837">
+      <Column Name="Id" Type="System.Int64" AutoSync="OnInsert" DbType="INTEGER NOT NULL" IsReadOnly="true" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="ba58b0d3-5056-4cbc-b3f9-e533513bc757" />
+      <Column Name="CodBarra" Type="System.String" DbType="NVARCHAR NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="20" ed:ValidateMaxLength="20" ed:ValidateRequired="true" ed:Guid="3c66a986-7fe2-473e-a3b2-3fce61506e83" />
+      <Column Name="PesoEmbalagem" Type="System.Double" DbType="FLOAT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="98f4415f-4a26-4885-953a-e68e4062de31" />
+      <Column Name="Descricao" Type="System.String" DbType="NVARCHAR" CanBeNull="true" UpdateCheck="Never" MaxLength="100" ed:ValidateMaxLength="100" ed:ValidateRequired="false" ed:Guid="d925427d-3c88-48fb-8a89-7222c9c84597" />
+      <Column Name="Data" Type="System.DateTime" DbType="DATETIME NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="06a2b431-8b9f-4379-8f90-edae9ad0d313" />
+    </Type>
+  </Table>
+</Database>

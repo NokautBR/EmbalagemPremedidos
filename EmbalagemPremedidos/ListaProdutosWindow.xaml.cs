@@ -26,7 +26,7 @@ namespace EmbalagemPremedidos
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            using (var db = new DadosDataContext())
+            using (var db = new Dados())
             {
                dataGrid.ItemsSource = db.Produto;
             }

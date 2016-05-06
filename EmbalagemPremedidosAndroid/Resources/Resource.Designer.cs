@@ -26,6 +26,9 @@ namespace EmbalagemPremedidosAndroid
 		
 		public static void UpdateIdValues()
 		{
+			global::ZXing.Mobile.Resource.Id.contentFrame = global::EmbalagemPremedidosAndroid.Resource.Id.contentFrame;
+			global::ZXing.Mobile.Resource.Layout.zxingscanneractivitylayout = global::EmbalagemPremedidosAndroid.Resource.Layout.zxingscanneractivitylayout;
+			global::ZXing.Mobile.Resource.Layout.zxingscannerfragmentlayout = global::EmbalagemPremedidosAndroid.Resource.Layout.zxingscannerfragmentlayout;
 		}
 		
 		public partial class Attribute
@@ -63,6 +66,9 @@ namespace EmbalagemPremedidosAndroid
 			// aapt resource value: 0x7f050000
 			public const int MyButton = 2131034112;
 			
+			// aapt resource value: 0x7f050001
+			public const int contentFrame = 2131034113;
+			
 			static Id()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -78,6 +84,12 @@ namespace EmbalagemPremedidosAndroid
 			
 			// aapt resource value: 0x7f030000
 			public const int Main = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int zxingscanneractivitylayout = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int zxingscannerfragmentlayout = 2130903042;
 			
 			static Layout()
 			{
